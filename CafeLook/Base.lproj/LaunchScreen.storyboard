@@ -16,24 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZ0-WL-OdZ">
-                                <rect key="frame" x="186" y="438" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CafeLookLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="I03-mq-XvN">
+                                <rect key="frame" x="173.5" y="414.5" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="07B-xl-5i3"/>
+                                    <constraint firstAttribute="height" constant="67" id="Jb4-PD-FEe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="bM3-6D-Wl8"/>
+                                    <constraint firstAttribute="width" constant="67" id="i1v-0u-6Cu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I03-mq-XvN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="KGD-Zc-Kfk"/>
+                            <constraint firstItem="I03-mq-XvN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hUy-01-P5K"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CafeLookLogo.png" width="512" height="445"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

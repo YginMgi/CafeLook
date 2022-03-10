@@ -1,24 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20019"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CafeLook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="FindingYourCafe.png" translatesAutoresizingMaskIntoConstraints="NO" id="qGU-6s-Oyg">
+                                <rect key="frame" x="36" y="128" width="208" height="84"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="MyU-EO-LFA"/>
+                                    <constraint firstAttribute="height" constant="84" id="OC7-bp-tAx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giD-Q4-abZ">
+                                <rect key="frame" x="40" y="252" width="139" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="6ab-ta-o1J"/>
+                                    <constraint firstAttribute="height" constant="15" id="Jpv-jM-kS7"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="지역을 선택해보세요!">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="AppleSDGothicNeo-SemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mh-4i-NST">
+                                <rect key="frame" x="36" y="285" width="58" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="GOf-G5-qDZ"/>
+                                    <constraint firstAttribute="height" constant="26" id="UqX-fH-UQ1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="서울">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" red="0.90588235289999997" green="0.84313725490000002" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8m-6V-WuV">
+                                <rect key="frame" x="102" y="285" width="58" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="6Iw-H4-fns"/>
+                                    <constraint firstAttribute="width" constant="58" id="Nxy-T7-Njg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="부산">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FD-Jx-VyK">
+                                <rect key="frame" x="168" y="285" width="58" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="j3R-7T-wuW"/>
+                                    <constraint firstAttribute="height" constant="26" id="u26-Pb-yxr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="대구">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" red="0.90588235289999997" green="0.84313725490000002" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhY-Ki-Oow">
+                                <rect key="frame" x="36" y="320" width="58" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="3Tg-6f-OPl"/>
+                                    <constraint firstAttribute="height" constant="26" id="W6h-Mm-Rt4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="광주">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfj-Zl-GtJ">
+                                <rect key="frame" x="102" y="320" width="58" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="NG2-RX-LKV"/>
+                                    <constraint firstAttribute="width" constant="58" id="mwc-W9-0U0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="대전">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" red="0.90588235289999997" green="0.84313725490000002" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ko9-KA-bPe">
+                                <rect key="frame" x="168" y="320" width="58" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="OT0-GQ-8St"/>
+                                    <constraint firstAttribute="width" constant="58" id="q9a-dn-mFJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="울산">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cIM-3N-j11">
+                                <rect key="frame" x="40" y="396" width="374" height="388"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Kkn-Hy-rvM"/>
+                                    <constraint firstAttribute="height" constant="388" id="b08-Lw-yZn"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OZD-Dg-6UG">
+                                    <size key="itemSize" width="228" height="388"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="AVv-x2-e9N" customClass="CafeCollectionViewCell" customModule="CafeLook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="388"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="i60-bn-ioQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="228" height="388"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CafeList1.png" id="pqH-gB-rKG">
+                                                    <rect key="frame" x="0.0" y="-3" width="228" height="394"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="228" height="388"/>
+                                        <connections>
+                                            <outlet property="backgroundImage" destination="pqH-gB-rKG" id="jfU-tX-T24"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qO8-Fk-EdW">
+                                        <rect key="frame" x="238" y="0.0" width="228" height="388"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XZz-EX-5vc">
+                                            <rect key="frame" x="0.0" y="0.0" width="228" height="388"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="228" height="388"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idy-fB-kFA">
+                                <rect key="frame" x="234" y="319" width="58" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="H72-4B-SsT"/>
+                                    <constraint firstAttribute="width" constant="58" id="MIv-C5-Kqp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="세종">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" red="0.90588235289999997" green="0.84313725490000002" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wo-Vs-0UY">
+                                <rect key="frame" x="234" y="285" width="58" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="3JE-77-8vo"/>
+                                    <constraint firstAttribute="height" constant="26" id="h3H-ca-Htt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="인천">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="tfj-Zl-GtJ" firstAttribute="top" secondItem="j8m-6V-WuV" secondAttribute="bottom" constant="9" id="0ss-bG-6Lz"/>
+                            <constraint firstItem="giD-Q4-abZ" firstAttribute="top" secondItem="qGU-6s-Oyg" secondAttribute="bottom" constant="40" id="27c-ZZ-N1z"/>
+                            <constraint firstItem="j8m-6V-WuV" firstAttribute="top" secondItem="giD-Q4-abZ" secondAttribute="bottom" constant="18" id="30z-Oc-Kd8"/>
+                            <constraint firstItem="8Mh-4i-NST" firstAttribute="top" secondItem="giD-Q4-abZ" secondAttribute="bottom" constant="18" id="7hR-Or-jcj"/>
+                            <constraint firstItem="tfj-Zl-GtJ" firstAttribute="leading" secondItem="HhY-Ki-Oow" secondAttribute="trailing" constant="8" symbolic="YES" id="8XO-aP-oyw"/>
+                            <constraint firstItem="qGU-6s-Oyg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="Abf-nx-LtV"/>
+                            <constraint firstItem="idy-fB-kFA" firstAttribute="top" secondItem="4wo-Vs-0UY" secondAttribute="bottom" constant="8" symbolic="YES" id="Agc-Sn-eIP"/>
+                            <constraint firstItem="4wo-Vs-0UY" firstAttribute="top" secondItem="qGU-6s-Oyg" secondAttribute="bottom" constant="73" id="Dyn-gM-Yh2"/>
+                            <constraint firstItem="j8m-6V-WuV" firstAttribute="leading" secondItem="8Mh-4i-NST" secondAttribute="trailing" constant="8" symbolic="YES" id="E21-Td-PMc"/>
+                            <constraint firstItem="9FD-Jx-VyK" firstAttribute="leading" secondItem="j8m-6V-WuV" secondAttribute="trailing" constant="8" symbolic="YES" id="FLP-jf-Nvy"/>
+                            <constraint firstItem="cIM-3N-j11" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Gfy-AB-8fc"/>
+                            <constraint firstItem="giD-Q4-abZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="XHo-wp-M14"/>
+                            <constraint firstItem="ko9-KA-bPe" firstAttribute="top" secondItem="9FD-Jx-VyK" secondAttribute="bottom" constant="9" id="XXY-iC-5XO"/>
+                            <constraint firstItem="9FD-Jx-VyK" firstAttribute="top" secondItem="giD-Q4-abZ" secondAttribute="bottom" constant="18" id="Xa2-BN-qeT"/>
+                            <constraint firstItem="8Mh-4i-NST" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="kIl-xB-et1"/>
+                            <constraint firstItem="idy-fB-kFA" firstAttribute="leading" secondItem="ko9-KA-bPe" secondAttribute="trailing" constant="8" symbolic="YES" id="krH-Dz-OuI"/>
+                            <constraint firstItem="ko9-KA-bPe" firstAttribute="leading" secondItem="tfj-Zl-GtJ" secondAttribute="trailing" constant="8" symbolic="YES" id="lXh-A9-KXu"/>
+                            <constraint firstItem="cIM-3N-j11" firstAttribute="top" secondItem="HhY-Ki-Oow" secondAttribute="bottom" constant="50" id="mEH-fx-fym"/>
+                            <constraint firstItem="HhY-Ki-Oow" firstAttribute="top" secondItem="8Mh-4i-NST" secondAttribute="bottom" constant="9" id="mF4-Gm-1bF"/>
+                            <constraint firstItem="4wo-Vs-0UY" firstAttribute="leading" secondItem="9FD-Jx-VyK" secondAttribute="trailing" constant="8" symbolic="YES" id="noG-94-nzd"/>
+                            <constraint firstItem="qGU-6s-Oyg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="ozG-dx-gBh"/>
+                            <constraint firstItem="HhY-Ki-Oow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="v5R-fS-BN9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cafeCollectionView" destination="cIM-3N-j11" id="uwj-zf-caf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="63.616071428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CafeList1.png" width="512" height="869"/>
+        <image name="FindingYourCafe.png" width="1087" height="512"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
