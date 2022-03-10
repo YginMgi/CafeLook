@@ -8,6 +8,5 @@
 import UIKit
 
 class CafeCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var backgroundImage: UIImageView!
-    
+    @IBOutlet weak var cafeImage: UIImageView!
 }
