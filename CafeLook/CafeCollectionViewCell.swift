@@ -41,8 +41,24 @@ class CafeCollectionViewCell: UICollectionViewCell {
         return l
     }()
     
-    private var openTitle: UILabel
-    private var closeTitle = UILabel()
+    private let openCloseView = UIView()
+    
+    private var openTitle: UILabel = {
+        let l = UILabel()
+        l.font = UIFont(name: "ArialRoundedMTBold", size: 10)
+        l.text = "OPEN"
+        l.textColor = UIColor(red: 118/255, green: 96/255, blue: 87/255, alpha: 1)
+        return l
+    }()
+    
+    private var closeTitle: UILabel = {
+        let l = UILabel()
+        l.font = UIFont(name: "ArialRoundedMTBold", size: 10)
+        l.text = "CLOSE"
+        l.textColor = UIColor(red: 118/255, green: 96/255, blue: 87/255, alpha: 1)
+        return l
+    }()
+    
     private var openTime = UILabel()
     private var closeTime = UILabel()
     
@@ -61,6 +77,7 @@ class CafeCollectionViewCell: UICollectionViewCell {
         cafeLabelView.addSubview(cafeName)
         cafeLabelView.addSubview(cafeLocation)
         cafeLocation.addSubview(locationImage)
+        bgView.addSubview(openCloseView)
         
         setupLayout()
         
@@ -77,6 +94,7 @@ class CafeCollectionViewCell: UICollectionViewCell {
         cafeName.translatesAutoresizingMaskIntoConstraints = false
         locationImage.translatesAutoresizingMaskIntoConstraints = false
         cafeLocation.translatesAutoresizingMaskIntoConstraints = false
+        openCloseView.translatesAutoresizingMaskIntoConstraints = false
         
         bgView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         bgView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
@@ -100,5 +118,11 @@ class CafeCollectionViewCell: UICollectionViewCell {
         cafeLocation.centerYAnchor.constraint(equalTo: locationImage.centerYAnchor).isActive = true
         cafeLocation.widthAnchor.constraint(equalToConstant: self.frame.width/2.5).isActive = true
         
+        openCloseView.heightAnchor.constraint(equalTo: cafeLabelView.heightAnchor).isActive = true
+        openCloseView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -contentView.frame.width/11.03).isActive = true
+        openCloseView.widthAnchor.constraint(equalToConstant: self.frame.width/2.8).isActive = true
+        openCloseView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+        openCloseView.backgroundColor = .yellow
     }
 }
