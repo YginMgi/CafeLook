@@ -34,8 +34,14 @@ class CafeCollectionViewCell: UICollectionViewCell {
         return i
     }()
     
-    private var cafeLocation = UILabel()
-    private var openTitle = UILabel()
+    var cafeLocation: UILabel = {
+        let l = UILabel()
+        l.font = UIFont(name: "AppleSDGothicNeo-UltraLight", size: 9)
+        l.textColor = UIColor.black
+        return l
+    }()
+    
+    private var openTitle: UILabel
     private var closeTitle = UILabel()
     private var openTime = UILabel()
     private var closeTime = UILabel()
@@ -70,6 +76,7 @@ class CafeCollectionViewCell: UICollectionViewCell {
         cafeLabelView.translatesAutoresizingMaskIntoConstraints = false
         cafeName.translatesAutoresizingMaskIntoConstraints = false
         locationImage.translatesAutoresizingMaskIntoConstraints = false
+        cafeLocation.translatesAutoresizingMaskIntoConstraints = false
         
         bgView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         bgView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
@@ -88,6 +95,10 @@ class CafeCollectionViewCell: UICollectionViewCell {
         locationImage.widthAnchor.constraint(equalToConstant: 8).isActive = true
         locationImage.heightAnchor.constraint(equalToConstant: 10).isActive = true
         locationImage.leftAnchor.constraint(equalTo: cafeName.leftAnchor).isActive = true
-
+        
+        cafeLocation.leftAnchor.constraint(equalTo: locationImage.rightAnchor, constant: self.frame.width/80).isActive = true
+        cafeLocation.centerYAnchor.constraint(equalTo: locationImage.centerYAnchor).isActive = true
+        cafeLocation.widthAnchor.constraint(equalToConstant: self.frame.width/2.5).isActive = true
+        
     }
 }

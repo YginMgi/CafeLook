@@ -54,6 +54,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         }
         
         cell.cafeName.text = cafeData.cafeName[indexPath.row]
+        cell.cafeLocation.text = cafeData.cafeLocation[indexPath.row]
         
         return cell
     }
