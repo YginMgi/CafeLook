@@ -28,7 +28,12 @@ class CafeCollectionViewCell: UICollectionViewCell {
         return l
     }()
     
-    private var locationImage = UIImage()
+    private var locationImage: UIImageView = {
+        let i = UIImageView()
+        i.image = UIImage(named: "CafeLook_LocationImage")
+        return i
+    }()
+    
     private var cafeLocation = UILabel()
     private var openTitle = UILabel()
     private var closeTitle = UILabel()
@@ -49,6 +54,7 @@ class CafeCollectionViewCell: UICollectionViewCell {
         bgView.addSubview(cafeLabelView)
         cafeLabelView.addSubview(cafeName)
         cafeLabelView.addSubview(cafeLocation)
+        cafeLocation.addSubview(locationImage)
         
         setupLayout()
         
@@ -63,6 +69,7 @@ class CafeCollectionViewCell: UICollectionViewCell {
         bgView.translatesAutoresizingMaskIntoConstraints = false
         cafeLabelView.translatesAutoresizingMaskIntoConstraints = false
         cafeName.translatesAutoresizingMaskIntoConstraints = false
+        locationImage.translatesAutoresizingMaskIntoConstraints = false
         
         bgView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         bgView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
@@ -70,11 +77,17 @@ class CafeCollectionViewCell: UICollectionViewCell {
         bgView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
         cafeLabelView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        cafeLabelView.heightAnchor.constraint(equalToConstant: self.frame.height/2).isActive = true
+        cafeLabelView.heightAnchor.constraint(equalToConstant: self.frame.height/2.5).isActive = true
         cafeLabelView.widthAnchor.constraint(equalToConstant: self.frame.width/2).isActive = true
         cafeLabelView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: contentView.frame.width/11.03).isActive = true
         
         cafeName.topAnchor.constraint(equalTo: cafeLabelView.topAnchor).isActive = true
         cafeName.leftAnchor.constraint(equalTo: cafeLabelView.leftAnchor).isActive = true
+        
+        locationImage.bottomAnchor.constraint(equalTo: cafeLabelView.bottomAnchor).isActive = true
+        locationImage.widthAnchor.constraint(equalToConstant: 8).isActive = true
+        locationImage.heightAnchor.constraint(equalToConstant: 10).isActive = true
+        locationImage.leftAnchor.constraint(equalTo: cafeName.leftAnchor).isActive = true
+
     }
 }
