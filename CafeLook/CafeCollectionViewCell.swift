@@ -19,17 +19,11 @@ class CafeCollectionViewCell: UICollectionViewCell {
         return v
     }()
     
-    private lazy var cafeLabelView: UIView = {
-        let v = UIView()
-        v.addSubview(cafeName)
-        v.addSubview(cafeLocation)
-        v.backgroundColor = .green
-        return v
-    }()
+    private var cafeLabelView = UIView()
     
-    private var cafeName: UILabel = {
+    var cafeName: UILabel = {
         let l = UILabel()
-        l.font = UIFont(name: "ARLRDBD", size: 20)
+        l.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 17)
         l.textColor = UIColor(red: 118/255, green: 96/255, blue: 87/255, alpha: 1)
         return l
     }()
@@ -53,9 +47,22 @@ class CafeCollectionViewCell: UICollectionViewCell {
     private func setupView(){
         contentView.addSubview(bgView)
         bgView.addSubview(cafeLabelView)
+        cafeLabelView.addSubview(cafeName)
+        cafeLabelView.addSubview(cafeLocation)
         
+        setupLayout()
+        
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 5
+        layer.shadowOffset = CGSize(width: 0, height: 4)
+        contentView.layer.masksToBounds = true
+    }
+    
+    private func setupLayout(){
         bgView.translatesAutoresizingMaskIntoConstraints = false
         cafeLabelView.translatesAutoresizingMaskIntoConstraints = false
+        cafeName.translatesAutoresizingMaskIntoConstraints = false
         
         bgView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         bgView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
@@ -67,10 +74,7 @@ class CafeCollectionViewCell: UICollectionViewCell {
         cafeLabelView.widthAnchor.constraint(equalToConstant: self.frame.width/2).isActive = true
         cafeLabelView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: contentView.frame.width/11.03).isActive = true
         
-        layer.shadowColor = UIColor.lightGray.cgColor
-        layer.shadowOpacity = 0.2
-        layer.shadowRadius = 5
-        layer.shadowOffset = CGSize(width: 0, height: 4)
-        contentView.layer.masksToBounds = true
+        cafeName.topAnchor.constraint(equalTo: cafeLabelView.topAnchor).isActive = true
+        cafeName.leftAnchor.constraint(equalTo: cafeLabelView.leftAnchor).isActive = true
     }
 }

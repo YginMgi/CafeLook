@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private let cafeData = CafeData()
+    
     @IBOutlet weak var gwangjuBtn: UIButton!
     
     private let cafeCollectionView: UICollectionView = {
@@ -50,6 +52,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CafeCollectionViewCell.identifier, for: indexPath) as? CafeCollectionViewCell else {
             return UICollectionViewCell()
         }
+        
+        cell.cafeName.text = cafeData.cafeName[indexPath.row]
         
         return cell
     }
