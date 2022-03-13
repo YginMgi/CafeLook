@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectLocationViewController: UIViewController {
+class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var locationImageView: UIImageView!
     
     private let cafeBackgroundView = CafeBackgroundView()
@@ -42,6 +42,8 @@ class SelectLocationViewController: UIViewController {
     }
     
     private func setupView(){
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
         addView()
         addLocation()
     }
