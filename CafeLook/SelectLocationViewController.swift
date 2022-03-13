@@ -14,6 +14,19 @@ class SelectLocationViewController: UIViewController {
     
     var location: String?
     
+    private let selectLabel: UILabel = {
+        var l = UILabel()
+        l.text = "더 세세하게 선택해보세요!"
+        l.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 12)
+        return l
+    }()
+    
+    private let 
+    
+//    lazy var locationStackView: UIStackView = {
+//        let s = UIStackView(arrangedSubviews: <#T##[UIView]#>)
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

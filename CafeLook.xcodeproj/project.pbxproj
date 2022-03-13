@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6A0120C127DDBDD7005C1975 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0120C027DDBDD7005C1975 /* SelectLocationViewController.swift */; };
 		6A0120C327DDD051005C1975 /* CafeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0120C227DDD051005C1975 /* CafeBackgroundView.swift */; };
+		6A0120C727DDD6E2005C1975 /* CafeFindedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0120C627DDD6E2005C1975 /* CafeFindedViewController.swift */; };
+		6A0120C927DDD98F005C1975 /* gooView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0120C827DDD98F005C1975 /* gooView.swift */; };
 		6A690ABF27D596DE00357613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A690ABE27D596DE00357613 /* AppDelegate.swift */; };
 		6A690AC127D596DE00357613 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A690AC027D596DE00357613 /* SceneDelegate.swift */; };
 		6A690AC327D596DE00357613 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A690AC227D596DE00357613 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		6A0120C027DDBDD7005C1975 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
 		6A0120C227DDD051005C1975 /* CafeBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeBackgroundView.swift; sourceTree = "<group>"; };
+		6A0120C627DDD6E2005C1975 /* CafeFindedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeFindedViewController.swift; sourceTree = "<group>"; };
+		6A0120C827DDD98F005C1975 /* gooView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gooView.swift; sourceTree = "<group>"; };
 		6A690ABB27D596DE00357613 /* CafeLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A690ABE27D596DE00357613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A690AC027D596DE00357613 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				6AB02DBE27DB1255007553E1 /* ARLRDBD.ttf */,
 				6A0120C027DDBDD7005C1975 /* SelectLocationViewController.swift */,
 				6A0120C227DDD051005C1975 /* CafeBackgroundView.swift */,
+				6A0120C627DDD6E2005C1975 /* CafeFindedViewController.swift */,
+				6A0120C827DDD98F005C1975 /* gooView.swift */,
 			);
 			path = CafeLook;
 			sourceTree = "<group>";
@@ -155,8 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A0120C327DDD051005C1975 /* CafeBackgroundView.swift in Sources */,
+				6A0120C727DDD6E2005C1975 /* CafeFindedViewController.swift in Sources */,
 				6A690AC327D596DE00357613 /* ViewController.swift in Sources */,
 				6A690ABF27D596DE00357613 /* AppDelegate.swift in Sources */,
+				6A0120C927DDD98F005C1975 /* gooView.swift in Sources */,
 				6AB02DBB27DB0E63007553E1 /* CafeData.swift in Sources */,
 				6A690AC127D596DE00357613 /* SceneDelegate.swift in Sources */,
 				6AB02DBD27DB0FC2007553E1 /* CafeCollectionViewCell.swift in Sources */,
