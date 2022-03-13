@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SKv-Vp-j1S">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -27,6 +27,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giD-Q4-abZ">
                                 <rect key="frame" x="40" y="252" width="139" height="15"/>
+                                <color key="tintColor" red="0.3529411764705882" green="0.3529411764705882" blue="0.3529411764705882" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="qlS-2T-eOx"/>
                                     <constraint firstAttribute="width" constant="139" id="waV-pK-Jjn"/>
@@ -39,7 +40,7 @@
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mh-4i-NST">
                                 <rect key="frame" x="36" y="285" width="58" height="26"/>
@@ -188,16 +189,75 @@
                             <constraint firstItem="giD-Q4-abZ" firstAttribute="top" secondItem="qGU-6s-Oyg" secondAttribute="bottom" constant="40" id="xvs-sf-rQ0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wzq-bq-aG2"/>
                     <connections>
+                        <outlet property="busanBtn" destination="j8m-6V-WuV" id="LPp-Yj-9MH"/>
+                        <outlet property="daeguBtn" destination="9FD-Jx-VyK" id="XMH-mJ-qcL"/>
+                        <outlet property="daejeonBtn" destination="tfj-Zl-GtJ" id="bP9-qn-uDr"/>
                         <outlet property="gwangjuBtn" destination="HhY-Ki-Oow" id="ejZ-Bg-P4D"/>
+                        <outlet property="incheonBtn" destination="4wo-Vs-0UY" id="k8s-fQ-KO7"/>
+                        <outlet property="sejongBtn" destination="idy-fB-kFA" id="llu-jN-Bcl"/>
+                        <outlet property="seoulBtn" destination="8Mh-4i-NST" id="dOh-7Z-6RU"/>
+                        <outlet property="ulsanBtn" destination="ko9-KA-bPe" id="y7f-bg-rtj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="63.616071428571423"/>
         </scene>
+        <!--Select Location View Controller-->
+        <scene sceneID="lSS-CM-pdb">
+            <objects>
+                <viewController storyboardIdentifier="SelectLocationViewController" id="NYH-Wl-k32" customClass="SelectLocationViewController" customModule="CafeLook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VCE-DM-uQd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CafeLook_IncheonImage" translatesAutoresizingMaskIntoConstraints="NO" id="YrT-He-fJa">
+                                <rect key="frame" x="36" y="104" width="120" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="gzu-0g-syU"/>
+                                    <constraint firstAttribute="height" constant="35" id="zjn-tR-caC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zLa-89-aRt"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YrT-He-fJa" firstAttribute="leading" secondItem="zLa-89-aRt" secondAttribute="leading" constant="36" id="RZZ-sZ-Jtu"/>
+                            <constraint firstItem="YrT-He-fJa" firstAttribute="top" secondItem="zLa-89-aRt" secondAttribute="top" constant="60" id="Tqk-Wq-iZh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="o4x-yd-Zao"/>
+                    <connections>
+                        <outlet property="locationImageView" destination="YrT-He-fJa" id="wdF-Pd-sCU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqs-lg-b5x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="64"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mqa-bJ-udu">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="SKv-Vp-j1S" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q0w-bj-zMX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GyP-uA-wlc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RyX-dY-5mQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4x1-IL-a2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-806" y="64"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="CafeLook_IncheonImage" width="512" height="112"/>
         <image name="FindingYourCafe" width="1087" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
