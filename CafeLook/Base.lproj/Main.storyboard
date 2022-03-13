@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SKv-Vp-j1S">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -55,6 +55,9 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NYH-Wl-k32" kind="push" id="6lw-Gf-pWs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8m-6V-WuV">
                                 <rect key="frame" x="102" y="285" width="58" height="26"/>
@@ -70,6 +73,9 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NYH-Wl-k32" kind="push" id="XLB-YU-b09"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FD-Jx-VyK">
                                 <rect key="frame" x="168" y="285" width="58" height="26"/>
@@ -85,6 +91,9 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NYH-Wl-k32" kind="push" id="bLU-NH-Uxm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhY-Ki-Oow">
                                 <rect key="frame" x="36" y="320" width="58" height="26"/>
@@ -100,6 +109,9 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NYH-Wl-k32" kind="push" id="MFa-vJ-W6l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfj-Zl-GtJ">
                                 <rect key="frame" x="102" y="320" width="58" height="26"/>
@@ -115,6 +127,9 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NYH-Wl-k32" kind="push" id="1c2-Qh-XGb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ko9-KA-bPe">
                                 <rect key="frame" x="168" y="320" width="58" height="26"/>
@@ -130,6 +145,9 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NYH-Wl-k32" kind="push" id="H3Y-BZ-MfM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idy-fB-kFA">
                                 <rect key="frame" x="234" y="319" width="58" height="26"/>
@@ -145,6 +163,9 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NYH-Wl-k32" kind="push" id="G9f-8l-umF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wo-Vs-0UY">
                                 <rect key="frame" x="234" y="285" width="58" height="26"/>
@@ -160,6 +181,9 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NYH-Wl-k32" kind="push" id="lo2-da-URD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -188,15 +212,60 @@
                             <constraint firstItem="giD-Q4-abZ" firstAttribute="top" secondItem="qGU-6s-Oyg" secondAttribute="bottom" constant="40" id="xvs-sf-rQ0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wzq-bq-aG2"/>
                     <connections>
+                        <outlet property="busanBtn" destination="j8m-6V-WuV" id="LPp-Yj-9MH"/>
+                        <outlet property="daeguBtn" destination="9FD-Jx-VyK" id="XMH-mJ-qcL"/>
+                        <outlet property="daejeonBtn" destination="tfj-Zl-GtJ" id="bP9-qn-uDr"/>
                         <outlet property="gwangjuBtn" destination="HhY-Ki-Oow" id="ejZ-Bg-P4D"/>
+                        <outlet property="incheonBtn" destination="4wo-Vs-0UY" id="k8s-fQ-KO7"/>
+                        <outlet property="sejongBtn" destination="idy-fB-kFA" id="llu-jN-Bcl"/>
+                        <outlet property="seoulBtn" destination="8Mh-4i-NST" id="dOh-7Z-6RU"/>
+                        <outlet property="ulsanBtn" destination="ko9-KA-bPe" id="y7f-bg-rtj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="63.616071428571423"/>
         </scene>
+        <!--Select Location View Controller-->
+        <scene sceneID="lSS-CM-pdb">
+            <objects>
+                <viewController id="NYH-Wl-k32" customClass="SelectLocationViewController" customModule="CafeLook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VCE-DM-uQd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zLa-89-aRt"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="o4x-yd-Zao"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqs-lg-b5x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="64"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mqa-bJ-udu">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="SKv-Vp-j1S" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q0w-bj-zMX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GyP-uA-wlc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RyX-dY-5mQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4x1-IL-a2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-806" y="64"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="H3Y-BZ-MfM"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="FindingYourCafe" width="1087" height="512"/>
         <systemColor name="labelColor">
