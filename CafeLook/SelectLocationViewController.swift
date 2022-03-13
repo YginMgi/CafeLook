@@ -12,20 +12,27 @@ class SelectLocationViewController: UIViewController {
     
     private let cafeBackgroundView = CafeBackgroundView()
     
+    private let namgooView = gooView()
+    private let donggooView = gooView()
+    private let gwansangooView = gooView()
+    
     var location: String?
     
     private let selectLabel: UILabel = {
         var l = UILabel()
-        l.text = "더 세세하게 선택해보세요!"
         l.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 12)
+        l.text = "더 자세히 선택해보세요!"
+        l.textColor = UIColor(red: 90/255, green: 90/255, blue: 90/255, alpha: 1)
         return l
     }()
     
-    private let 
-    
-//    lazy var locationStackView: UIStackView = {
-//        let s = UIStackView(arrangedSubviews: <#T##[UIView]#>)
-//    }
+    lazy var locationStackView: UIStackView = {
+        let s = UIStackView(arrangedSubviews: [namgooView, donggooView, gwansangooView])
+        s.axis = .horizontal
+        s.spacing = 10
+        s.distribution = .fillEqually
+        return s
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,15 +48,28 @@ class SelectLocationViewController: UIViewController {
     
     private func addView(){
         view.addSubview(cafeBackgroundView)
+        cafeBackgroundView.addSubview(selectLabel)
+        cafeBackgroundView.addSubview(locationStackView)
     }
     
     private func addLocation(){
         cafeBackgroundView.translatesAutoresizingMaskIntoConstraints = false
+        selectLabel.translatesAutoresizingMaskIntoConstraints = false
+        locationStackView.translatesAutoresizingMaskIntoConstraints = false
+
         
         cafeBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         cafeBackgroundView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         cafeBackgroundView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         cafeBackgroundView.heightAnchor.constraint(equalToConstant: view.frame.height/1.27).isActive = true
+        
+        selectLabel.topAnchor.constraint(equalTo: cafeBackgroundView.topAnchor, constant: view.frame.height/22.55).isActive = true
+        selectLabel.leftAnchor.constraint(equalTo: cafeBackgroundView.leftAnchor, constant: view.frame.width/10.13).isActive = true
+        
+        locationStackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: view.frame.width/12.93).isActive = true
+        locationStackView.widthAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
+        locationStackView.heightAnchor.constraint(equalToConstant: view.frame.height/29).isActive = true
+        locationStackView.topAnchor.constraint(equalTo: selectLabel.bottomAnchor, constant: view.frame.height/90.22).isActive = true
     }
     
     private func changeLocationImage(location: String){

@@ -7,14 +7,8 @@
 
 import UIKit
 
-class gooView: UIView {
+class gooView: UIButton {
     private let viewBounds = UIScreen.main.bounds
-    
-    var locationLabel: UILabel = {
-        var l = UILabel()
-        l.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 10)
-        l.textColor = UIColor(red: 109/255, green: 109/255, blue: 109/255, alpha: 1)
-    }()
     
     // MARK: - init
     override init(frame: CGRect) {
@@ -30,15 +24,16 @@ class gooView: UIView {
     // MARK: - Helpers
     private func setupView(){
         self.backgroundColor = UIColor.white
-        self.addSubview(locationLabel)
-        
-        locationLabel.translatesAutoresizingMaskIntoConstraints = true
-        locationLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        locationLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.heightAnchor.constraint(equalToConstant: viewBounds.height/29).isActive = true
         self.widthAnchor.constraint(equalToConstant: viewBounds.width/6.69).isActive = true
+        
+        self.layer.cornerRadius = viewBounds.height/29/2
+        
+        self.setTitle("남구", for: .normal)
+        self.titleLabel!.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 10)
+        self.setTitleColor(UIColor(red: 109/255, green: 109/255, blue: 109/255, alpha: 1), for: .normal)
     }
 }

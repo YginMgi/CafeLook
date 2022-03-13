@@ -27,6 +27,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giD-Q4-abZ">
                                 <rect key="frame" x="40" y="252" width="139" height="15"/>
+                                <color key="tintColor" red="0.3529411764705882" green="0.3529411764705882" blue="0.3529411764705882" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="qlS-2T-eOx"/>
                                     <constraint firstAttribute="width" constant="139" id="waV-pK-Jjn"/>
@@ -39,7 +40,7 @@
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mh-4i-NST">
                                 <rect key="frame" x="36" y="285" width="58" height="26"/>
@@ -213,9 +214,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CafeLook_IncheonImage" translatesAutoresizingMaskIntoConstraints="NO" id="YrT-He-fJa">
-                                <rect key="frame" x="36" y="104" width="160" height="35"/>
+                                <rect key="frame" x="36" y="104" width="120" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="gzu-0g-syU"/>
+                                    <constraint firstAttribute="width" constant="120" id="gzu-0g-syU"/>
                                     <constraint firstAttribute="height" constant="35" id="zjn-tR-caC"/>
                                 </constraints>
                             </imageView>
