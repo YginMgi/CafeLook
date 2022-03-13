@@ -89,8 +89,6 @@ class ViewController: UIViewController {
     @objc private func deagoBtnClicked(_: UIButton){ sendData(location: "Deago") }
 }
 
-
-
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8

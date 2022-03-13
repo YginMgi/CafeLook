@@ -10,12 +10,33 @@ import UIKit
 class SelectLocationViewController: UIViewController {
     @IBOutlet weak var locationImageView: UIImageView!
     
+    private let cafeBackgroundView = CafeBackgroundView()
+    
     var location: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("location : \(location)")
+        
         changeLocationImage(location: location!)
+        setupView()
+    }
+    
+    private func setupView(){
+        addView()
+        addLocation()
+    }
+    
+    private func addView(){
+        view.addSubview(cafeBackgroundView)
+    }
+    
+    private func addLocation(){
+        cafeBackgroundView.translatesAutoresizingMaskIntoConstraints = false
+        
+        cafeBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        cafeBackgroundView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        cafeBackgroundView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        cafeBackgroundView.heightAnchor.constraint(equalToConstant: view.frame.height/1.27).isActive = true
     }
     
     private func changeLocationImage(location: String){
@@ -42,7 +63,7 @@ class SelectLocationViewController: UIViewController {
             locationImageView.image = UIImage(named: "CafeLook_SeoulImage")
             break
         case "Ulsan":
-            locationImageView.image = UIImage(named: "CafeLook_GwanjuImage")
+            locationImageView.image = UIImage(named: "CafeLook_UlsanImage")
             break
         default:
             break
