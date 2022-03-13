@@ -43,6 +43,8 @@ class CafeCollectionViewCell: UICollectionViewCell {
     
     private let openCloseView = UIView()
     
+    private let viview = UIView()
+    
     private var openTitle: UILabel = {
         let l = UILabel()
         l.font = UIFont(name: "ArialRoundedMTBold", size: 10)
@@ -59,8 +61,19 @@ class CafeCollectionViewCell: UICollectionViewCell {
         return l
     }()
     
-    private var openTime = UILabel()
-    private var closeTime = UILabel()
+    private var openTime: UILabel = {
+        let l = UILabel()
+        l.font = UIFont(name: "AppleSDGothicNeo-UltraLight", size: 10)
+        l.text = "12:00"
+        return l
+    }()
+    
+    private var closeTime: UILabel = {
+        let l = UILabel()
+        l.font = UIFont(name: "AppleSDGothicNeo-UltraLight", size: 10)
+        l.text = "13:00"
+        return l
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -72,29 +85,31 @@ class CafeCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupView(){
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 5
+        layer.shadowOffset = CGSize(width: 0, height: 4)
+        contentView.layer.masksToBounds = true
+        
+        addView()
+        setupLayout()
+    }
+    
+    private func addView(){
         contentView.addSubview(bgView)
         bgView.addSubview(cafeLabelView)
         cafeLabelView.addSubview(cafeName)
         cafeLabelView.addSubview(cafeLocation)
         cafeLocation.addSubview(locationImage)
         bgView.addSubview(openCloseView)
-        
-        setupLayout()
-        
-        layer.shadowColor = UIColor.lightGray.cgColor
-        layer.shadowOpacity = 0.2
-        layer.shadowRadius = 5
-        layer.shadowOffset = CGSize(width: 0, height: 4)
-        contentView.layer.masksToBounds = true
+        openCloseView.addSubview(openTime)
+        openCloseView.addSubview(closeTime)
+        openCloseView.addSubview(openTitle)
+        openCloseView.addSubview(closeTitle)
     }
     
     private func setupLayout(){
-        bgView.translatesAutoresizingMaskIntoConstraints = false
-        cafeLabelView.translatesAutoresizingMaskIntoConstraints = false
-        cafeName.translatesAutoresizingMaskIntoConstraints = false
-        locationImage.translatesAutoresizingMaskIntoConstraints = false
-        cafeLocation.translatesAutoresizingMaskIntoConstraints = false
-        openCloseView.translatesAutoresizingMaskIntoConstraints = false
+        [bgView, cafeLabelView, cafeName, locationImage, cafeLocation, openCloseView, openTime, openTitle, closeTime, closeTitle].forEach{$0.translatesAutoresizingMaskIntoConstraints = false}
         
         bgView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         bgView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
@@ -120,9 +135,19 @@ class CafeCollectionViewCell: UICollectionViewCell {
         
         openCloseView.heightAnchor.constraint(equalTo: cafeLabelView.heightAnchor).isActive = true
         openCloseView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -contentView.frame.width/11.03).isActive = true
-        openCloseView.widthAnchor.constraint(equalToConstant: self.frame.width/2.8).isActive = true
+        openCloseView.widthAnchor.constraint(equalToConstant: self.frame.width/3.8).isActive = true
         openCloseView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
-        openCloseView.backgroundColor = .yellow
+        openTitle.topAnchor.constraint(equalTo: openCloseView.topAnchor).isActive = true
+        openTitle.leftAnchor.constraint(equalTo: openCloseView.leftAnchor).isActive = true
+        
+        closeTitle.leftAnchor.constraint(equalTo: openCloseView.leftAnchor).isActive = true
+        closeTitle.bottomAnchor.constraint(equalTo: openCloseView.bottomAnchor).isActive = true
+        
+        openTime.rightAnchor.constraint(equalTo: openCloseView.rightAnchor).isActive = true
+        openTime.topAnchor.constraint(equalTo: openCloseView.topAnchor).isActive = true
+        
+        closeTime.rightAnchor.constraint(equalTo: openCloseView.rightAnchor).isActive = true
+        closeTime.bottomAnchor.constraint(equalTo: openCloseView.bottomAnchor).isActive = true
     }
 }

@@ -63,12 +63,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
 extension ViewController: UICollectionViewDelegateFlowLayout{
     //MARK: collectionview - cell height
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: self.view.frame.width/1.25, height: self.view.frame.height/10)
-    }
-     
-    //MARK: collectionView - left Padding
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: self.view.frame.width/9.61, bottom: 0, right: self.view.frame.width/9.61)
+        return CGSize(width: view.frame.width/1.25, height: view.frame.height/9.6)
     }
     
     //MARK: collectionView - cell 간격
