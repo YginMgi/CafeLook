@@ -55,9 +55,6 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NYH-Wl-k32" kind="push" id="6lw-Gf-pWs"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8m-6V-WuV">
                                 <rect key="frame" x="102" y="285" width="58" height="26"/>
@@ -73,9 +70,6 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NYH-Wl-k32" kind="push" id="XLB-YU-b09"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FD-Jx-VyK">
                                 <rect key="frame" x="168" y="285" width="58" height="26"/>
@@ -91,9 +85,6 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NYH-Wl-k32" kind="push" id="bLU-NH-Uxm"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhY-Ki-Oow">
                                 <rect key="frame" x="36" y="320" width="58" height="26"/>
@@ -109,9 +100,6 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NYH-Wl-k32" kind="push" id="MFa-vJ-W6l"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfj-Zl-GtJ">
                                 <rect key="frame" x="102" y="320" width="58" height="26"/>
@@ -127,9 +115,6 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NYH-Wl-k32" kind="push" id="1c2-Qh-XGb"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ko9-KA-bPe">
                                 <rect key="frame" x="168" y="320" width="58" height="26"/>
@@ -145,9 +130,6 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NYH-Wl-k32" kind="push" id="H3Y-BZ-MfM"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idy-fB-kFA">
                                 <rect key="frame" x="234" y="319" width="58" height="26"/>
@@ -163,9 +145,6 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NYH-Wl-k32" kind="push" id="G9f-8l-umF"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wo-Vs-0UY">
                                 <rect key="frame" x="234" y="285" width="58" height="26"/>
@@ -181,9 +160,6 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="10"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NYH-Wl-k32" kind="push" id="lo2-da-URD"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -231,18 +207,34 @@
         <!--Select Location View Controller-->
         <scene sceneID="lSS-CM-pdb">
             <objects>
-                <viewController id="NYH-Wl-k32" customClass="SelectLocationViewController" customModule="CafeLook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectLocationViewController" id="NYH-Wl-k32" customClass="SelectLocationViewController" customModule="CafeLook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCE-DM-uQd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CafeLook_IncheonImage" translatesAutoresizingMaskIntoConstraints="NO" id="YrT-He-fJa">
+                                <rect key="frame" x="36" y="128" width="160" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="gzu-0g-syU"/>
+                                    <constraint firstAttribute="height" constant="35" id="zjn-tR-caC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zLa-89-aRt"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YrT-He-fJa" firstAttribute="leading" secondItem="zLa-89-aRt" secondAttribute="leading" constant="36" id="RZZ-sZ-Jtu"/>
+                            <constraint firstItem="YrT-He-fJa" firstAttribute="top" secondItem="zLa-89-aRt" secondAttribute="top" constant="84" id="Tqk-Wq-iZh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o4x-yd-Zao"/>
+                    <connections>
+                        <outlet property="locationImageView" destination="YrT-He-fJa" id="wdF-Pd-sCU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqs-lg-b5x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="64"/>
+            <point key="canvasLocation" x="805.79710144927537" y="63.616071428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mqa-bJ-udu">
@@ -263,10 +255,8 @@
             <point key="canvasLocation" x="-806" y="64"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="H3Y-BZ-MfM"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="CafeLook_IncheonImage" width="512" height="112"/>
         <image name="FindingYourCafe" width="1087" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

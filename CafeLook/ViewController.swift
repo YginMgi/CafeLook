@@ -10,8 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     private let cafeData = CafeData()
     
-    private let selectLocationViewController = SelectLocationViewController()
-    
     @IBOutlet weak var seoulBtn: UIButton!
     @IBOutlet weak var busanBtn: UIButton!
     @IBOutlet weak var gwangjuBtn: UIButton!
@@ -48,7 +46,7 @@ class ViewController: UIViewController {
         ulsanBtn.addTarget(self, action: #selector(ulsanBtnClicked(_:)), for: .touchUpInside)
         sejongBtn.addTarget(self, action: #selector(sejongBtnClicked(_:)), for: .touchUpInside)
         incheonBtn.addTarget(self, action: #selector(incheonBtnClicked(_:)), for: .touchUpInside)
-        daeguBtn.addTarget(self, action: #selector(daeguBtnClicked(_:)), for: .touchUpInside)
+        daeguBtn.addTarget(self, action: #selector(deagoBtnClicked(_:)), for: .touchUpInside)
     }
     
     private func addDelegate(){
@@ -73,38 +71,22 @@ class ViewController: UIViewController {
         cafeCollectionView.topAnchor.constraint(equalTo: gwangjuBtn.bottomAnchor, constant: view.frame.height/13.7).isActive = true
     }
     
-    @objc private func seoulBtnClicked(_: UIButton){
-        selectLocationViewController.changelocationText(location: "seoul")
+    private func sendData(location : String){
+        guard let vc =  storyboard?.instantiateViewController(identifier: "SelectLocationViewController") as? SelectLocationViewController else
+                { return }
+        vc.location = location
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc private func busanBtnClicked(_: UIButton){
-        selectLocationViewController.changelocationText(location: "busan")
-    }
-    
-    @objc private func gwangjuBtnClicked(_: UIButton){
-        selectLocationViewController.changelocationText(location: "gwangju")
-    }
-    
-    @objc private func daejeonBtnClicked(_: UIButton){
-        selectLocationViewController.changelocationText(location: "daejeon")
-    }
-    
-    @objc private func ulsanBtnClicked(_: UIButton){
-        selectLocationViewController.changelocationText(location: "ulsan")
-    }
-    
-    @objc private func sejongBtnClicked(_: UIButton){
-        selectLocationViewController.changelocationText(location: "sejong")
-    }
-    
-    @objc private func incheonBtnClicked(_: UIButton){
-        selectLocationViewController.changelocationText(location: "incheon")
-    }
-    
-    @objc private func daeguBtnClicked(_: UIButton){
-        selectLocationViewController.changelocationText(location: "daegu")
-    }
-    
+    // MARK: - targets
+    @objc private func seoulBtnClicked(_: UIButton){ sendData(location: "Seoul") }
+    @objc private func busanBtnClicked(_: UIButton){ sendData(location: "Busan") }
+    @objc private func gwangjuBtnClicked(_: UIButton){ sendData(location: "Gwanju") }
+    @objc private func daejeonBtnClicked(_: UIButton){ sendData(location: "Daejeon") }
+    @objc private func ulsanBtnClicked(_: UIButton){ sendData(location: "Ulsan") }
+    @objc private func sejongBtnClicked(_: UIButton){ sendData(location: "Sejong") }
+    @objc private func incheonBtnClicked(_: UIButton){ sendData(location: "Incheon") }
+    @objc private func deagoBtnClicked(_: UIButton){ sendData(location: "Deago") }
 }
 
 
