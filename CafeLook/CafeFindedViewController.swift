@@ -99,6 +99,10 @@ extension CafeFindedViewController: UICollectionViewDataSource, UICollectionView
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // SelectLocationVC로 이벤트 전달
+    }
 }
 
 extension CafeFindedViewController: UICollectionViewDelegateFlowLayout{

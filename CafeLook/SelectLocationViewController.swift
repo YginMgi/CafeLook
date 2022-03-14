@@ -152,4 +152,5 @@ extension SelectLocationViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return view.frame.width/41.66
     }
+
 }
