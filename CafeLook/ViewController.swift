@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     }
     
     private func addRegister(){
-        cafeCollectionView.register(CafeCollectionViewCell.self, forCellWithReuseIdentifier: CafeCollectionViewCell.identifier)
+        cafeCollectionView.register(CafeCollectionViewCell.self, forCellWithReuseIdentifier: CafeCollectionViewCell.reuseId)
     }
     
     private func addView(){
@@ -95,7 +95,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CafeCollectionViewCell.identifier, for: indexPath) as? CafeCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CafeCollectionViewCell.reuseId, for: indexPath) as? CafeCollectionViewCell else {
             return UICollectionViewCell()
         }
         

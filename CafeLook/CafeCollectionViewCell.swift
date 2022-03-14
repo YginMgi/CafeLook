@@ -8,7 +8,7 @@
 import UIKit
 
 class CafeCollectionViewCell: UICollectionViewCell {
-    static let identifier = "\(CafeCollectionViewCell.self)"
+    static let reuseId = "\(CafeCollectionViewCell.self)"
     
     private var bgView: UIView = {
        let v = UIView()
