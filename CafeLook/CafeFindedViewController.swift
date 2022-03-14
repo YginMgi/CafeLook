@@ -10,7 +10,7 @@ import UIKit
 class CafeFindedViewController: UIViewController {
     // MARK: - Property
     private let cafeBackgroundView = CafeBackgroundView()
-    
+        
     private let findCafeLabel: UILabel = {
         var l = UILabel()
         l.text = "광주광역시에 있는 카페에요!"
@@ -24,6 +24,15 @@ class CafeFindedViewController: UIViewController {
          cv.backgroundColor = UIColor(red: 243/255, green: 241/255, blue: 240/255, alpha: 1)
          return cv
      }()
+    
+    init(text: String?){
+        super.init(nibName: nil, bundle: nil)
+        findCafeLabel.text = "\(text!)에 있는 카페에요!"
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 
     // MARK: - lifeCycle
@@ -89,6 +98,10 @@ extension CafeFindedViewController: UICollectionViewDataSource, UICollectionView
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // SelectLocationVC로 이벤트 전달
     }
 }
 
