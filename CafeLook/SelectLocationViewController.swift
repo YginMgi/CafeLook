@@ -12,6 +12,8 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
     
     private let cafeBackgroundView = CafeBackgroundView()
     
+    private let cafeFindedViewController = CafeFindedViewController()
+    
     private let namgooView = gooView()
     private let donggooView = gooView()
     private let gwansangooView = gooView()
@@ -50,16 +52,15 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
     
     private func addView(){
         view.addSubview(cafeBackgroundView)
-        cafeBackgroundView.addSubview(selectLabel)
-        cafeBackgroundView.addSubview(locationStackView)
+        [selectLabel, locationStackView, cafeFindedViewController.view].forEach{ cafeBackgroundView.addSubview($0) }
     }
     
     private func addLocation(){
         cafeBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         selectLabel.translatesAutoresizingMaskIntoConstraints = false
         locationStackView.translatesAutoresizingMaskIntoConstraints = false
+        cafeFindedViewController.view.translatesAutoresizingMaskIntoConstraints = false
 
-        
         cafeBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         cafeBackgroundView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         cafeBackgroundView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -72,6 +73,11 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
         locationStackView.widthAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
         locationStackView.heightAnchor.constraint(equalToConstant: view.frame.height/29).isActive = true
         locationStackView.topAnchor.constraint(equalTo: selectLabel.bottomAnchor, constant: view.frame.height/90.22).isActive = true
+        
+        cafeFindedViewController.view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        cafeFindedViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        cafeFindedViewController.view.heightAnchor.constraint(equalToConstant: view.frame.height/1.54).isActive = true
+        cafeFindedViewController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
     private func changeLocationImage(location: String){
