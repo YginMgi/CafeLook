@@ -66,7 +66,7 @@ class FindCafeCollectionViewCell: UICollectionViewCell {
         cafeLocation.translatesAutoresizingMaskIntoConstraints = false
         locationImage.translatesAutoresizingMaskIntoConstraints = false
         
-        labelView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: self.frame.width/18.75).isActive = true
+        labelView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: self.frame.width/12.75).isActive = true
         labelView.heightAnchor.constraint(equalToConstant: self.frame.height/2).isActive = true
         labelView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         labelView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
