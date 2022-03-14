@@ -12,7 +12,7 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
     
     private let cafeBackgroundView = CafeBackgroundView()
     
-    private let cafeFindedViewController = CafeFindedViewController()
+    private var cafeFindedViewController = CafeFindedViewController(text: "")
     
     var location: String?
     
@@ -90,39 +90,37 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
         cafeFindedViewController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
+    private func dataSetting(gooData: [String], locationName: String, imageName: String){
+        gooLocationArr = gooData
+        cafeFindedViewController = CafeFindedViewController(text: locationName)
+        locationImageView.image = UIImage(named: imageName)
+    }
+    
     private func changeLocationImage(location: String){
         switch location{
         case "Gwanju":
-            gooLocationArr = gooData.gwangju
-            locationImageView.image = UIImage(named: "CafeLook_GwanjuImage")
+            dataSetting(gooData: gooData.gwangju, locationName: "광주광역시", imageName: "CafeLook_GwanjuImage")
             break
         case "Busan":
-            locationImageView.image = UIImage(named: "CafeLook_BusanImage")
-            gooLocationArr = gooData.busan
+            dataSetting(gooData: gooData.busan, locationName: "부산광역시", imageName: "CafeLook_BusanImage")
             break
         case "Daejeon":
-            locationImageView.image = UIImage(named: "CafeLook_DaejeonImage")
-            gooLocationArr = gooData.daejeon
+            dataSetting(gooData: gooData.daejeon, locationName: "대전광역시", imageName: "CafeLook_DaejeonImage")
             break
         case "Deago":
-            locationImageView.image = UIImage(named: "CafeLook_DeagoImage")
-            gooLocationArr = gooData.daegu
+            dataSetting(gooData: gooData.daegu, locationName: "대구광역시", imageName: "CafeLook_DeagoImage")
             break
         case "Incheon":
-            locationImageView.image = UIImage(named: "CafeLook_IncheonImage")
-            gooLocationArr = gooData.incheon
+            dataSetting(gooData: gooData.incheon, locationName: "인천광역시", imageName: "CafeLook_IncheonImage")
             break
         case "Sejong":
-            locationImageView.image = UIImage(named: "CafeLook_SejongImage")
-            gooLocationArr = gooData.sejong
+            dataSetting(gooData: gooData.sejong, locationName: "세종특별자치시", imageName: "CafeLook_SejongImage")
             break
         case "Seoul":
-            locationImageView.image = UIImage(named: "CafeLook_SeoulImage")
-            gooLocationArr = gooData.seoul
+            dataSetting(gooData: gooData.seoul, locationName: "서울광역시", imageName: "CafeLook_SeoulImage")
             break
         case "Ulsan":
-            locationImageView.image = UIImage(named: "CafeLook_UlsanImage")
-            gooLocationArr = gooData.ulsan
+            dataSetting(gooData: gooData.ulsan, locationName: "울산광역시", imageName: "CafeLook_UlsanImage")
             break
         default:
             break
