@@ -18,6 +18,8 @@
 		6A690AC627D596DE00357613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A690AC427D596DE00357613 /* Main.storyboard */; };
 		6A690AC827D596E000357613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A690AC727D596E000357613 /* Assets.xcassets */; };
 		6A690ACB27D596E000357613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A690AC927D596E000357613 /* LaunchScreen.storyboard */; };
+		6A8281B227DEDBED00B20791 /* FindCafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8281B127DEDBED00B20791 /* FindCafeCollectionViewCell.swift */; };
+		6AB02DBB27DB0E63007553E1 /* CafeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB02DBA27DB0E63007553E1 /* CafeData.swift */; };
 		6AB02DBD27DB0FC2007553E1 /* CafeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB02DBC27DB0FC2007553E1 /* CafeCollectionViewCell.swift */; };
 		6AB02DBF27DB1258007553E1 /* ARLRDBD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AB02DBE27DB1255007553E1 /* ARLRDBD.ttf */; };
 		8A14A28A27DEB758001DDA7A /* CafeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14A28927DEB758001DDA7A /* CafeData.swift */; };
@@ -37,6 +39,8 @@
 		6A690AC727D596E000357613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A690ACA27D596E000357613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A690ACC27D596E000357613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A8281B127DEDBED00B20791 /* FindCafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCafeCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AB02DBA27DB0E63007553E1 /* CafeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CafeData.swift; path = ../../../../EZY_Image/CafeData.swift; sourceTree = "<group>"; };
 		6AB02DBC27DB0FC2007553E1 /* CafeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeCollectionViewCell.swift; sourceTree = "<group>"; };
 		6AB02DBE27DB1255007553E1 /* ARLRDBD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ARLRDBD.ttf; sourceTree = "<group>"; };
 		8A14A28927DEB758001DDA7A /* CafeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeData.swift; sourceTree = "<group>"; };
@@ -79,12 +83,15 @@
 				6A690AC727D596E000357613 /* Assets.xcassets */,
 				6A690AC927D596E000357613 /* LaunchScreen.storyboard */,
 				6A690ACC27D596E000357613 /* Info.plist */,
+				6AB02DBA27DB0E63007553E1 /* CafeData.swift */,
+				6A0120CA27DE2399005C1975 /* GooData.swift */,
 				6AB02DBC27DB0FC2007553E1 /* CafeCollectionViewCell.swift */,
-				6AB02DBE27DB1255007553E1 /* ARLRDBD.ttf */,
+				6A8281B127DEDBED00B20791 /* FindCafeCollectionViewCell.swift */,
 				6A0120C027DDBDD7005C1975 /* SelectLocationViewController.swift */,
-				6A0120C227DDD051005C1975 /* CafeBackgroundView.swift */,
 				6A0120C627DDD6E2005C1975 /* CafeFindedViewController.swift */,
+				6A0120C227DDD051005C1975 /* CafeBackgroundView.swift */,
 				6A0120C827DDD98F005C1975 /* gooView.swift */,
+				6AB02DBE27DB1255007553E1 /* ARLRDBD.ttf */,
 				6A0120CA27DE2399005C1975 /* GooData.swift */,
 				8A14A28927DEB758001DDA7A /* CafeData.swift */,
 			);
@@ -163,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A8281B227DEDBED00B20791 /* FindCafeCollectionViewCell.swift in Sources */,
 				6A0120C327DDD051005C1975 /* CafeBackgroundView.swift in Sources */,
 				6A0120C727DDD6E2005C1975 /* CafeFindedViewController.swift in Sources */,
 				8A14A28A27DEB758001DDA7A /* CafeData.swift in Sources */,
