@@ -14,10 +14,6 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
     
     private let cafeFindedViewController = CafeFindedViewController()
     
-    private let namgooView = gooView()
-    private let donggooView = gooView()
-    private let gwansangooView = gooView()
-    
     var location: String?
     
     private let selectLabel: UILabel = {
@@ -28,14 +24,7 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
         return l
     }()
     
-    lazy var locationStackView: UIStackView = {
-        let s = UIStackView(arrangedSubviews: [namgooView, donggooView, gwansangooView])
-        s.axis = .horizontal
-        s.spacing = 10
-        s.distribution = .fillEqually
-        return s
-    }()
-    
+    // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,22 +32,21 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
         setupView()
     }
     
+    // MARK: - Helpers
     private func setupView(){
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
         addView()
         addLocation()
     }
     
     private func addView(){
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         view.addSubview(cafeBackgroundView)
-        [selectLabel, locationStackView, cafeFindedViewController.view].forEach{ cafeBackgroundView.addSubview($0) }
+        [selectLabel, cafeFindedViewController.view].forEach{ cafeBackgroundView.addSubview($0) }
     }
     
     private func addLocation(){
         cafeBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         selectLabel.translatesAutoresizingMaskIntoConstraints = false
-        locationStackView.translatesAutoresizingMaskIntoConstraints = false
         cafeFindedViewController.view.translatesAutoresizingMaskIntoConstraints = false
 
         cafeBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
@@ -68,11 +56,6 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
         
         selectLabel.topAnchor.constraint(equalTo: cafeBackgroundView.topAnchor, constant: view.frame.height/22.55).isActive = true
         selectLabel.leftAnchor.constraint(equalTo: cafeBackgroundView.leftAnchor, constant: view.frame.width/10.13).isActive = true
-        
-        locationStackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: view.frame.width/12.93).isActive = true
-        locationStackView.widthAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
-        locationStackView.heightAnchor.constraint(equalToConstant: view.frame.height/29).isActive = true
-        locationStackView.topAnchor.constraint(equalTo: selectLabel.bottomAnchor, constant: view.frame.height/90.22).isActive = true
         
         cafeFindedViewController.view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         cafeFindedViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
