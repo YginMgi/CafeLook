@@ -92,12 +92,12 @@
 				6A8281B327DF13CC00B20791 /* gooCollectionViewCell.swift */,
 				6A0120C027DDBDD7005C1975 /* SelectLocationViewController.swift */,
 				6A0120C627DDD6E2005C1975 /* CafeFindedViewController.swift */,
+				6A8281B527DF563000B20791 /* CafeDetailViewController.swift */,
 				6A0120C227DDD051005C1975 /* CafeBackgroundView.swift */,
 				6A0120C827DDD98F005C1975 /* gooView.swift */,
 				6AB02DBE27DB1255007553E1 /* ARLRDBD.ttf */,
 				6A0120CA27DE2399005C1975 /* GooData.swift */,
 				8A14A28927DEB758001DDA7A /* CafeData.swift */,
-				6A8281B527DF563000B20791 /* CafeDetailViewController.swift */,
 			);
 			path = CafeLook;
 			sourceTree = "<group>";
