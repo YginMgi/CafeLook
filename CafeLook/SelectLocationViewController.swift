@@ -40,7 +40,7 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
     // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("SelectLocationViewController")
         changeLocationImage(location: location!)
         setupView()
     }
@@ -143,6 +143,13 @@ extension SelectLocationViewController: UICollectionViewDelegate, UICollectionVi
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("asdf")
+        guard let vc =  storyboard?.instantiateViewController(identifier: "CafeDetailViewController") as? CafeDetailViewController else
+                { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     //MARK: collectionview - cell height
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width/5.85, height: view.frame.height/29)
@@ -152,5 +159,4 @@ extension SelectLocationViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return view.frame.width/41.66
     }
-
 }
