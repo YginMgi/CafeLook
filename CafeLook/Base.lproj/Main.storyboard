@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SKv-Vp-j1S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SKv-Vp-j1S">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20019"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CafeLook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CafeLook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,37 +255,36 @@
             </objects>
             <point key="canvasLocation" x="-806" y="64"/>
         </scene>
-        <!--View Controller-->
+        <!--Cafe Detail View Controller-->
         <scene sceneID="w5v-qx-SFP">
             <objects>
-                <viewController id="yBI-Ve-tU8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CafeDetailViewController" id="yBI-Ve-tU8" customClass="CafeDetailViewController" customModule="CafeLook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ECB-ch-MQs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-3v-Xa6">
-                                <rect key="frame" x="44" y="148" width="83.5" height="29"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="민지카페">
-                                        <attributes>
-                                            <font key="NSFont" size="24" name="AppleSDGothicNeo-Bold"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="민지카페" lineBreakMode="tailTruncation" numberOfLines="24" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-3v-Xa6">
+                                <rect key="frame" x="44" y="148" width="300" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="547-xr-hCX"/>
+                                    <constraint firstAttribute="height" constant="29" id="6sy-17-FfB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <color key="textColor" red="0.28042201803188127" green="0.28042201803188127" blue="0.28042201803188127" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CafeLook_LocationImage" translatesAutoresizingMaskIntoConstraints="NO" id="TNc-Yc-UZh">
                                 <rect key="frame" x="44" y="186" width="18" height="15"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="5fg-6H-n72"/>
-                                    <constraint firstAttribute="width" constant="18" id="XhF-Uc-LIC"/>
+                                    <constraint firstAttribute="height" constant="15" id="pbW-5p-Ucq"/>
+                                    <constraint firstAttribute="width" constant="18" id="zg1-mU-bLH"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-WE-03x">
-                                <rect key="frame" x="70" y="186" width="143.5" height="12"/>
+                                <rect key="frame" x="70" y="186" width="200" height="12"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="8zt-er-lYr"/>
-                                    <constraint firstAttribute="width" constant="143.5" id="iHq-93-eIJ"/>
+                                    <constraint firstAttribute="height" constant="12" id="2ns-JK-d61"/>
+                                    <constraint firstAttribute="width" constant="200" id="eAe-Ys-iuD"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="광주광역시 광산구 상무대로 232 1층">
@@ -303,21 +302,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CafeButtonBackground" translatesAutoresizingMaskIntoConstraints="NO" id="TPo-8T-Crt">
-                                <rect key="frame" x="44" y="225" width="325" height="75"/>
+                                <rect key="frame" x="44.5" y="225" width="325" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="6T6-CV-QdN"/>
-                                    <constraint firstAttribute="width" constant="325" id="dAC-zi-LIG"/>
+                                    <constraint firstAttribute="width" constant="325" id="DYm-8X-kjy"/>
+                                    <constraint firstAttribute="height" constant="75" id="cUw-gd-46u"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="premiumiconfinger" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-al-HJK">
                                 <rect key="frame" x="63" y="246" width="31" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Kiu-QJ-hYG"/>
-                                    <constraint firstAttribute="width" constant="31" id="c6B-0K-c25"/>
+                                    <constraint firstAttribute="height" constant="32" id="2IU-xF-QIz"/>
+                                    <constraint firstAttribute="width" constant="31" id="C4Y-jc-jGd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjL-R2-hDo">
                                 <rect key="frame" x="101" y="250" width="209" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="VCd-WR-oyf"/>
+                                    <constraint firstAttribute="height" constant="12" id="bY5-uh-6Ti"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="여기를 클릭해 민지카페의 더 많은 정보를 만나보세요!">
                                         <attributes>
@@ -329,6 +332,10 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBT-F2-hgr">
                                 <rect key="frame" x="101" y="266" width="104" height="9"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="F5g-qf-fPs"/>
+                                    <constraint firstAttribute="height" constant="9" id="m9M-Ou-Dgw"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="박스를 클릭하면 인스타로 이동합니다.">
                                         <attributes>
@@ -345,10 +352,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vZ-Mt-2Mn">
-                                <rect key="frame" x="44" y="225" width="325" height="75"/>
+                                <rect key="frame" x="44.5" y="225" width="325" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="5Yj-Yt-3Mt"/>
-                                    <constraint firstAttribute="width" constant="325" id="kKP-yc-24t"/>
+                                    <constraint firstAttribute="width" constant="325" id="TWW-7q-JZa"/>
+                                    <constraint firstAttribute="height" constant="75" id="mj7-KE-E4f"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -357,33 +364,31 @@
                         <viewLayoutGuide key="safeArea" id="eaS-ML-aNl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mjL-R2-hDo" firstAttribute="top" secondItem="4rD-WE-03x" secondAttribute="bottom" constant="52" id="0Y7-cq-ids"/>
-                            <constraint firstItem="iYh-3v-Xa6" firstAttribute="leading" secondItem="eaS-ML-aNl" secondAttribute="leading" constant="44" id="2Gi-Ux-5TI"/>
-                            <constraint firstItem="4vZ-Mt-2Mn" firstAttribute="leading" secondItem="eaS-ML-aNl" secondAttribute="leading" constant="44" id="4fV-7w-nfS"/>
-                            <constraint firstItem="eaS-ML-aNl" firstAttribute="bottom" secondItem="4vZ-Mt-2Mn" secondAttribute="bottom" constant="562" id="56L-mO-QQZ"/>
-                            <constraint firstItem="eaS-ML-aNl" firstAttribute="trailing" secondItem="4vZ-Mt-2Mn" secondAttribute="trailing" constant="45" id="8ng-b6-RGW"/>
-                            <constraint firstItem="iYh-3v-Xa6" firstAttribute="top" secondItem="eaS-ML-aNl" secondAttribute="top" constant="104" id="8yG-ka-9YZ"/>
-                            <constraint firstItem="4vZ-Mt-2Mn" firstAttribute="top" secondItem="TNc-Yc-UZh" secondAttribute="bottom" constant="24" id="9fe-1j-g2M"/>
-                            <constraint firstItem="TNc-Yc-UZh" firstAttribute="leading" secondItem="eaS-ML-aNl" secondAttribute="leading" constant="44" id="EJm-dT-Zp3"/>
-                            <constraint firstItem="TNc-Yc-UZh" firstAttribute="top" secondItem="iYh-3v-Xa6" secondAttribute="bottom" constant="9" id="ISZ-Qm-wga"/>
-                            <constraint firstItem="4rD-WE-03x" firstAttribute="leading" secondItem="TNc-Yc-UZh" secondAttribute="trailing" constant="8" id="LvB-lf-Isv"/>
-                            <constraint firstItem="yBT-F2-hgr" firstAttribute="leading" secondItem="5Ea-al-HJK" secondAttribute="trailing" constant="7" id="S64-LB-0La"/>
-                            <constraint firstItem="eaS-ML-aNl" firstAttribute="trailing" secondItem="TPo-8T-Crt" secondAttribute="trailing" constant="45" id="cjT-MR-C2h"/>
-                            <constraint firstItem="mjL-R2-hDo" firstAttribute="leading" secondItem="5Ea-al-HJK" secondAttribute="trailing" constant="7" id="ev2-od-Jqz"/>
-                            <constraint firstItem="eaS-ML-aNl" firstAttribute="trailing" secondItem="4rD-WE-03x" secondAttribute="trailing" constant="200.5" id="f83-E4-cJ9"/>
-                            <constraint firstItem="5Ea-al-HJK" firstAttribute="leading" secondItem="eaS-ML-aNl" secondAttribute="leading" constant="63" id="ihT-hO-LrA"/>
-                            <constraint firstItem="eaS-ML-aNl" firstAttribute="trailing" secondItem="iYh-3v-Xa6" secondAttribute="trailing" constant="286.5" id="m3W-o7-0SN"/>
-                            <constraint firstItem="yBT-F2-hgr" firstAttribute="top" secondItem="mjL-R2-hDo" secondAttribute="bottom" constant="4" id="oyR-g0-TBq"/>
-                            <constraint firstItem="TPo-8T-Crt" firstAttribute="top" secondItem="TNc-Yc-UZh" secondAttribute="bottom" constant="24" id="sGW-F3-sA7"/>
-                            <constraint firstItem="4rD-WE-03x" firstAttribute="top" secondItem="iYh-3v-Xa6" secondAttribute="bottom" constant="9" id="tEQ-fi-nla"/>
-                            <constraint firstItem="TPo-8T-Crt" firstAttribute="leading" secondItem="eaS-ML-aNl" secondAttribute="leading" constant="44" id="tOG-ca-9ok"/>
-                            <constraint firstItem="5Ea-al-HJK" firstAttribute="top" secondItem="4rD-WE-03x" secondAttribute="bottom" constant="48" id="twO-OY-KQI"/>
+                            <constraint firstItem="TNc-Yc-UZh" firstAttribute="top" secondItem="iYh-3v-Xa6" secondAttribute="bottom" constant="9" id="1V0-sP-2DQ"/>
+                            <constraint firstItem="mjL-R2-hDo" firstAttribute="top" secondItem="4rD-WE-03x" secondAttribute="bottom" constant="52" id="8Tg-FQ-eWf"/>
+                            <constraint firstItem="4rD-WE-03x" firstAttribute="top" secondItem="iYh-3v-Xa6" secondAttribute="bottom" constant="9" id="9p3-gp-gFV"/>
+                            <constraint firstItem="yBT-F2-hgr" firstAttribute="top" secondItem="mjL-R2-hDo" secondAttribute="bottom" constant="4" id="A6j-lo-uMO"/>
+                            <constraint firstItem="iYh-3v-Xa6" firstAttribute="leading" secondItem="eaS-ML-aNl" secondAttribute="leading" constant="44" id="ELX-ci-TIe"/>
+                            <constraint firstItem="mjL-R2-hDo" firstAttribute="leading" secondItem="5Ea-al-HJK" secondAttribute="trailing" constant="7" id="NIv-K1-8kc"/>
+                            <constraint firstItem="5Ea-al-HJK" firstAttribute="top" secondItem="4rD-WE-03x" secondAttribute="bottom" constant="48" id="XTq-Bc-kc0"/>
+                            <constraint firstItem="eaS-ML-aNl" firstAttribute="trailing" secondItem="iYh-3v-Xa6" secondAttribute="trailing" constant="70" id="adM-y7-gzX"/>
+                            <constraint firstItem="yBT-F2-hgr" firstAttribute="leading" secondItem="5Ea-al-HJK" secondAttribute="trailing" constant="7" id="b4t-bH-hwX"/>
+                            <constraint firstItem="TPo-8T-Crt" firstAttribute="leading" secondItem="eaS-ML-aNl" secondAttribute="leading" constant="44.5" id="iFG-mJ-pCq"/>
+                            <constraint firstItem="TNc-Yc-UZh" firstAttribute="leading" secondItem="eaS-ML-aNl" secondAttribute="leading" constant="44" id="lxj-i7-LxV"/>
+                            <constraint firstItem="eaS-ML-aNl" firstAttribute="trailing" secondItem="TPo-8T-Crt" secondAttribute="trailing" constant="44.5" id="mMO-nb-uAq"/>
+                            <constraint firstItem="4vZ-Mt-2Mn" firstAttribute="top" secondItem="TNc-Yc-UZh" secondAttribute="bottom" constant="24" id="nJi-bJ-H5u"/>
+                            <constraint firstItem="iYh-3v-Xa6" firstAttribute="top" secondItem="eaS-ML-aNl" secondAttribute="top" constant="104" id="ppR-oz-4QG"/>
+                            <constraint firstItem="4rD-WE-03x" firstAttribute="leading" secondItem="TNc-Yc-UZh" secondAttribute="trailing" constant="8" symbolic="YES" id="qt0-ny-Drx"/>
+                            <constraint firstItem="TPo-8T-Crt" firstAttribute="top" secondItem="TNc-Yc-UZh" secondAttribute="bottom" constant="24" id="rK8-tZ-Unx"/>
+                            <constraint firstItem="5Ea-al-HJK" firstAttribute="leading" secondItem="eaS-ML-aNl" secondAttribute="leading" constant="63" id="raJ-TX-iLm"/>
+                            <constraint firstItem="4vZ-Mt-2Mn" firstAttribute="centerX" secondItem="ECB-ch-MQs" secondAttribute="centerX" id="yiI-4X-N66"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZl-a3-b1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1561" y="64"/>
+            <point key="canvasLocation" x="1540.5797101449277" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>

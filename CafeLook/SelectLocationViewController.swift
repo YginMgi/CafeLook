@@ -12,11 +12,13 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
     
     private let cafeBackgroundView = CafeBackgroundView()
     
-    private let namgooView = gooView()
-    private let donggooView = gooView()
-    private let gwansangooView = gooView()
+    private var cafeFindedViewController = CafeFindedViewController(text: "")
     
     var location: String?
+    
+    private let gooData = GooData()
+    
+    var gooLocationArr: [String] = []
     
     private let selectLabel: UILabel = {
         var l = UILabel()
@@ -26,40 +28,49 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
         return l
     }()
     
-    lazy var locationStackView: UIStackView = {
-        let s = UIStackView(arrangedSubviews: [namgooView, donggooView, gwansangooView])
-        s.axis = .horizontal
-        s.spacing = 10
-        s.distribution = .fillEqually
-        return s
+    private let gooCollectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        let c = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        c.backgroundColor = .clear
+        c.showsHorizontalScrollIndicator = false
+        return c
     }()
     
+    // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("SelectLocationViewController")
         changeLocationImage(location: location!)
         setupView()
     }
     
+    // MARK: - Helpers
     private func setupView(){
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
+        addCollectionView()
         addView()
         addLocation()
     }
     
+    private func addCollectionView(){
+        gooCollectionView.delegate = self
+        gooCollectionView.dataSource = self
+        
+        gooCollectionView.register(gooCollectionViewCell.self, forCellWithReuseIdentifier: gooCollectionViewCell.reuseId)
+    }
+    
     private func addView(){
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         view.addSubview(cafeBackgroundView)
-        cafeBackgroundView.addSubview(selectLabel)
-        cafeBackgroundView.addSubview(locationStackView)
+        [selectLabel, cafeFindedViewController.view, gooCollectionView].forEach{ cafeBackgroundView.addSubview($0) }
     }
     
     private func addLocation(){
         cafeBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         selectLabel.translatesAutoresizingMaskIntoConstraints = false
-        locationStackView.translatesAutoresizingMaskIntoConstraints = false
+        cafeFindedViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        gooCollectionView.translatesAutoresizingMaskIntoConstraints = false
 
-        
         cafeBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         cafeBackgroundView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         cafeBackgroundView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -68,40 +79,84 @@ class SelectLocationViewController: UIViewController, UIGestureRecognizerDelegat
         selectLabel.topAnchor.constraint(equalTo: cafeBackgroundView.topAnchor, constant: view.frame.height/22.55).isActive = true
         selectLabel.leftAnchor.constraint(equalTo: cafeBackgroundView.leftAnchor, constant: view.frame.width/10.13).isActive = true
         
-        locationStackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: view.frame.width/12.93).isActive = true
-        locationStackView.widthAnchor.constraint(equalToConstant: view.frame.width/2).isActive = true
-        locationStackView.heightAnchor.constraint(equalToConstant: view.frame.height/29).isActive = true
-        locationStackView.topAnchor.constraint(equalTo: selectLabel.bottomAnchor, constant: view.frame.height/90.22).isActive = true
+        gooCollectionView.topAnchor.constraint(equalTo: selectLabel.bottomAnchor, constant: view.frame.height/54.13).isActive = true
+        gooCollectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: view.frame.width/12.93).isActive = true
+        gooCollectionView.heightAnchor.constraint(equalToConstant: view.frame.height/29).isActive = true
+        gooCollectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+                
+        cafeFindedViewController.view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        cafeFindedViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        cafeFindedViewController.view.heightAnchor.constraint(equalToConstant: view.frame.height/1.54).isActive = true
+        cafeFindedViewController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
+    private func dataSetting(gooData: [String], locationName: String, imageName: String){
+        gooLocationArr = gooData
+        cafeFindedViewController = CafeFindedViewController(text: locationName)
+        locationImageView.image = UIImage(named: imageName)
     }
     
     private func changeLocationImage(location: String){
         switch location{
         case "Gwanju":
-            locationImageView.image = UIImage(named: "CafeLook_GwanjuImage")
+            dataSetting(gooData: gooData.gwangju, locationName: "광주광역시", imageName: "CafeLook_GwanjuImage")
             break
         case "Busan":
-            locationImageView.image = UIImage(named: "CafeLook_BusanImage")
+            dataSetting(gooData: gooData.busan, locationName: "부산광역시", imageName: "CafeLook_BusanImage")
             break
         case "Daejeon":
-            locationImageView.image = UIImage(named: "CafeLook_DaejeonImage")
+            dataSetting(gooData: gooData.daejeon, locationName: "대전광역시", imageName: "CafeLook_DaejeonImage")
             break
         case "Deago":
-            locationImageView.image = UIImage(named: "CafeLook_DeagoImage")
+            dataSetting(gooData: gooData.daegu, locationName: "대구광역시", imageName: "CafeLook_DeagoImage")
             break
         case "Incheon":
-            locationImageView.image = UIImage(named: "CafeLook_IncheonImage")
+            dataSetting(gooData: gooData.incheon, locationName: "인천광역시", imageName: "CafeLook_IncheonImage")
             break
         case "Sejong":
-            locationImageView.image = UIImage(named: "CafeLook_SejongImage")
+            dataSetting(gooData: gooData.sejong, locationName: "세종특별자치시", imageName: "CafeLook_SejongImage")
             break
         case "Seoul":
-            locationImageView.image = UIImage(named: "CafeLook_SeoulImage")
+            dataSetting(gooData: gooData.seoul, locationName: "서울광역시", imageName: "CafeLook_SeoulImage")
             break
         case "Ulsan":
-            locationImageView.image = UIImage(named: "CafeLook_UlsanImage")
+            dataSetting(gooData: gooData.ulsan, locationName: "울산광역시", imageName: "CafeLook_UlsanImage")
             break
         default:
             break
         }
+    }
+}
+
+extension SelectLocationViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return gooLocationArr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: gooCollectionViewCell.reuseId, for: indexPath) as? gooCollectionViewCell else { return UICollectionViewCell() }
+        
+        cell.backgroundColor = .white
+        cell.layer.cornerRadius = view.frame.height/29/2
+        cell.gooBtn.setTitle(gooLocationArr[indexPath.row], for: .normal)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("asdf")
+        guard let vc =  storyboard?.instantiateViewController(identifier: "CafeDetailViewController") as? CafeDetailViewController else
+                { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //MARK: collectionview - cell height
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width/5.85, height: view.frame.height/29)
+    }
+    
+    //MARK: collectionView - cell 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return view.frame.width/41.66
     }
 }
