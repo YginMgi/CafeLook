@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     private let cafeData = CafeData()
     
     @IBOutlet weak var seoulBtn: UIButton!
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     @objc private func deagoBtnClicked(_: UIButton){ sendData(location: "Deago") }
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
     }
@@ -104,9 +104,15 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate{
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc =  storyboard?.instantiateViewController(identifier: "CafeDetailViewController") as? CafeDetailViewController else
+                { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout{
+extension MainViewController: UICollectionViewDelegateFlowLayout{
     //MARK: collectionview - cell height
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width/1.25, height: view.frame.height/9.6)

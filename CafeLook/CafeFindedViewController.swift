@@ -101,7 +101,10 @@ extension CafeFindedViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // SelectLocationVC로 이벤트 전달
+        
+        guard let vc =  storyboard?.instantiateViewController(identifier: "CafeDetailViewController") as? CafeDetailViewController else
+                { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
